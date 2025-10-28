@@ -3,7 +3,8 @@
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import Bath.Cum;
-import API.user;
+import Asset.Product.product;
+import Asset.user;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -21,6 +22,8 @@ public class Launch {
 //        ConnectDB.getConnection();
         
         user.run();
+        
+        product.run();
         
         new Cum().setVisible(true);
     }
