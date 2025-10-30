@@ -1,8 +1,9 @@
 
-//import DB.ConnectDB;
+import DB.ConnectDB;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import Bath.Cum;
+import Bath.ProductListView;
 import Asset.Product.product;
 import Asset.user;
 
@@ -19,12 +20,14 @@ public class Launch {
     public static void main(String args[]) throws UnsupportedEncodingException {
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
         
-//        ConnectDB.getConnection();
+        ConnectDB.getConnection();
         
         user.run();
         
         product.run();
         
         new Cum().setVisible(true);
+        
+        new ProductListView().setVisible(true);
     }
 }

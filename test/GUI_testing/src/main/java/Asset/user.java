@@ -24,7 +24,7 @@ import com.google.gson.JsonObject;
  */
 public class user {
     public static void run() {
-        try (Connection conn = ConnectDB.getConnection()) {
+        try (Connection conn = ConnectDB.getConnection(true)) {
             if (conn == null) {
                 System.out.println("-----------------------------------------");
                 System.out.println("💀 Không thể kết nối cơ sở dữ liệu.");
@@ -54,8 +54,8 @@ public class user {
 
             String sql = """
                     IF NOT EXISTS (SELECT 1 FROM Users WHERE Username = ?)
-                        INSERT INTO Users (Username, Email, Password)
-                        VALUES (?, ?, ?);
+                        INSERT INTO Users (Username, Email, Password, Name)
+                        VALUES (?, ?, ?, ?);
             """;
             PreparedStatement pstmt = conn.prepareStatement(sql);
             Random random = new Random();
@@ -65,11 +65,13 @@ public class user {
                 String username = u.get("username").getAsString();
                 String email = u.get("email").getAsString();
                 String password = "pass" + (1000 + random.nextInt(9000));            
-
+                String name = u.get("name").getAsString();
+                
                 pstmt.setString(1, username);
                 pstmt.setString(2, username);
                 pstmt.setString(3, email);
                 pstmt.setString(4, password);
+                pstmt.setString(5, name);
                 pstmt.addBatch();
             }
 
@@ -78,7 +80,7 @@ public class user {
 
             String testUserSql = """                           
                 IF NOT EXISTS (SELECT 1 FROM Users WHERE Username = '1' AND Email = '1@g.com')
-                INSERT INTO Users (Username, Email, Password) VALUES ('1', '1@g.com', '1');
+                INSERT INTO Users (Username, Email, Password, Name ) VALUES ('1', '1@g.com', '1', 'testsubject');
             """;
 
             PreparedStatement testStmt = conn.prepareStatement(testUserSql);

@@ -1,6 +1,11 @@
+Bath\ProductListView.class
 Bath\Cum.class
 Launch.class
+controller\ProductController.class
+Asset\user.class
+Bath\ProductListView$1.class
+Bath\ProductCard.class
 Bath\Cum$1.class
 DB\ConnectDB.class
-Asset\user.class
+model\DAO\ProductDAO.class
 Asset\DeleteAll.class
