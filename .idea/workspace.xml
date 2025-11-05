@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f4113d6-c304-4c29-8866-27b4942accf6" name="Changes" comment="✅ 30/10/2025 - - add name to users test some grid layout for product fix asset.user">
-      <change afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/view/ProductCard.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/view/ProductCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/view/ProductListView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/view/ProductListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/src/main/java/Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/Launch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/src/main/java/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/src/main/java/model/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/model/DAO/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/src/main/java/model/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/java/model/Entity/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/src/main/resources/Asset/Picture/Screenshot 2025-10-15 174112.png" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/src/main/resources/Asset/Picture/default.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/target/classes/Launch.class" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/target/classes/Launch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/target/classes/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/target/classes/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/target/classes/model/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/target/classes/model/DAO/ProductDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GUI_testing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/test/GUI_testing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mavenproject1/src/main/java/FirstStep/contronller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/mavenproject1/src/main/java/FirstStep/contronller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mavenproject1/src/main/java/FirstStep/model/DAO/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/mavenproject1/src/main/java/FirstStep/model/DAO/UsersDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="4f4113d6-c304-4c29-8866-27b4942accf6" name="Changes" comment="✅ 30/10/2025 - - add name to users test some grid layout for product fix asset.user" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,24 +24,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ProductListView.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dat&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/acebi/Documents/GitHub/java_swing/test/GUI_testing/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ProductListView.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Dat",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/acebi/Documents/GitHub/java_swing/test/GUI_testing/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Debugger_Data_Views_Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\resources" />
@@ -107,6 +94,7 @@
       <workItem from="1761675657798" duration="11609000" />
       <workItem from="1761801791344" duration="5358000" />
       <workItem from="1762002235751" duration="7453000" />
+      <workItem from="1762335716122" duration="908000" />
     </task>
     <task id="LOCAL-00001" summary="✅ 30/10/2025 - - add name to users test some grid layout for product fix asset.user">
       <option name="closed" value="true" />
