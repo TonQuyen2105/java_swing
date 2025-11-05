@@ -1,0 +1,3 @@
+1.vẽ sơ đồ BFD đến mức 2 của hệ thống
+2.Vẽ sơ đồ use case mức tổng quát của hệ thống
+3.Vể sơ đồ use case cho các chức năng mức 1 của hệ thống
