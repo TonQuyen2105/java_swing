@@ -3,7 +3,8 @@ import DB.ConnectDB;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import Bath.Cum;
-import Bath.ProductListView;
+//import Bath.ProductListView;
+import view.ProductListView;
 import Asset.Product.product;
 import Asset.user;
 
@@ -29,5 +30,7 @@ public class Launch {
         new Cum().setVisible(true);
         
         new ProductListView().setVisible(true);
+        
+//        ProductController.showProducts();
     }
 }

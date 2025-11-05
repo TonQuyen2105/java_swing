@@ -10,5 +10,10 @@ C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\Bath\P
 C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\controller\ProductController.java
 C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\DB\ConnectDB.java
 C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\Launch.java
+C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\model\DAO\BaseDAO.java
 C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\model\DAO\ProductDAO.java
-C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\model\Entity\Product.java
+C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\model\Entity\Products.java
+C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\view\HomePage.java
+C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\view\ProductCard.java
+C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\view\ProductDetail.java
+C:\Users\acebi\Documents\GitHub\java_swing\test\GUI_testing\src\main\java\view\ProductListView.java
