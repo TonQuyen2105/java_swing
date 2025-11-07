@@ -225,7 +225,6 @@ public class mainPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(1500, 1500));
         setUndecorated(true);
 
         pnlHeader.setBackground(new java.awt.Color(255, 255, 255));

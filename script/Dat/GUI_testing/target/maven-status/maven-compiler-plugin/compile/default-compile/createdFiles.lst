@@ -5,6 +5,7 @@ view\HomePage$1.class
 view\ProductDetail.class
 Asset\user.class
 view\ProductListView.class
+view\Order$1.class
 Bath\Cum$1.class
 DB\ConnectDB.class
 Bath\ProductListView.class
@@ -16,4 +17,5 @@ Bath\ProductCard.class
 view\ProductCard.class
 model\Entity\Products.class
 model\DAO\ProductDAO.class
+view\Order.class
 Asset\DeleteAll.class
