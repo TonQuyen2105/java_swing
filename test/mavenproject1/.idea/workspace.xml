@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="938fdab9-7437-48dd-b5bb-4b94ffee6c99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Course_JFX_2025/src/main/java/application/course_jfx_2025/CalculatorApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java course 2025/_26th_oop/_26th_oop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java course 2025/java course 2025.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/test.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/test1.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ruby/moebooru-master/.idea/moebooru-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="34Q89eJE1b2Nq8WF7DcPGX1Um3f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.NewJFrame.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/acebi/Documents/Code/java/mavenproject1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="938fdab9-7437-48dd-b5bb-4b94ffee6c99" name="Changes" comment="" />
+      <created>1761134284501</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761134284501</updated>
+      <workItem from="1761134285915" duration="4086000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
