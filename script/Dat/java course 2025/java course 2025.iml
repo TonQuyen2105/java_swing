@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/_10th_substrings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_11th_weight_converter" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_12th_ternary_operator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_13th_enhanced_switches" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_14th_logical_operators" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_15th_while_loop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_16th_for_loop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_17th_stop_continue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_18th_nested_loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_19th_method" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_1st_variable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_20th_overloaded_methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_21th_variable_scope" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_22th_dice_roller" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_23th_arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_25th_matrix" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_27th_aggregation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_28th_composition" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_29th_wrapper_classes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_2nd_scanner" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_30th_arraylists" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_31th_music_player" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_32th_dates_times" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_33th_anonymous_classes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_34th_timertask" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_35th_generics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_36th_hashmaps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_37th_enums" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_38th_threading" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_39th_multithreading" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_3rd_window" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_40th_alram_clock" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_4th_arithmetic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_5th_if_statement" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_6th_math_class" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_7th_printf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_8th_nested_if_statement" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_9th_string_methods" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
