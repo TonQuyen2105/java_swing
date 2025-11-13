@@ -113,17 +113,17 @@ public class mainPage extends javax.swing.JFrame {
     itemProduct sp1 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày bóng rổ", 130.501);
 //    file:/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg
 
-    itemProduct sp2 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp3 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp4 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp5 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp6 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày bóng rổ", 130.501);
+    itemProduct sp2 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-4.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp3 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-5.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp4 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-6.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp5 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-5.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp6 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-6.jpg", "Giày bóng rổ", 130.501);
     itemProduct sp7 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp8 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp8 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-4.jpg", "Giày chạy bộ", 130.501);
     itemProduct sp9 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp10 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp11 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày bóng rổ", 130.501);
-    itemProduct sp12 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp10 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-6.jpg", "Giày chạy bộ", 130.501);
+    itemProduct sp11 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-4.jpg", "Giày bóng rổ", 130.501);
+    itemProduct sp12 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-5.jpg", "Giày chạy bộ", 130.501);
     itemProduct sp13 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
     itemProduct sp14 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
     itemProduct sp15 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
@@ -281,16 +281,19 @@ public class mainPage extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
         ListOrder = new javax.swing.JPanel();
         chitietdonhang = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
         ListChiTietOrder = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
@@ -1024,9 +1027,14 @@ public class mainPage extends javax.swing.JFrame {
         jLabel29.setText("Price");
         jPanel1.add(jLabel29);
 
-        jLabel41.setText("   ");
-        jLabel41.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 50, 1));
-        jPanel1.add(jLabel41);
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setLayout(new java.awt.GridLayout());
+
+        jLabel42.setText(" ");
+        jLabel42.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 50, 1));
+        jPanel8.add(jLabel42);
+
+        jPanel1.add(jPanel8);
 
         donhang.add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
@@ -1046,11 +1054,11 @@ public class mainPage extends javax.swing.JFrame {
         jLabel30.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 20, 1, 1));
         jPanel18.add(jLabel30);
 
+        jLabel32.setText("Image");
+        jPanel18.add(jLabel32);
+
         jLabel31.setText("ProductName");
         jPanel18.add(jLabel31);
-
-        jLabel32.setText("Price");
-        jPanel18.add(jLabel32);
 
         jLabel33.setText("Quantity");
         jPanel18.add(jLabel33);
@@ -1058,10 +1066,21 @@ public class mainPage extends javax.swing.JFrame {
         jLabel34.setText("Total");
         jPanel18.add(jLabel34);
 
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setLayout(new java.awt.GridLayout());
+
+        jLabel40.setBackground(new java.awt.Color(255, 255, 255));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel40.setText("Quay Lại");
-        jLabel40.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 50, 30));
-        jPanel18.add(jLabel40);
+        jLabel40.setText("Price");
+        jLabel40.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 10));
+        jPanel7.add(jLabel40);
+
+        jLabel41.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("Quay Lại");
+        jLabel41.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 50, 1));
+        jPanel7.add(jLabel41);
+
+        jPanel18.add(jPanel7);
 
         chitietdonhang.add(jPanel18, java.awt.BorderLayout.PAGE_START);
 
@@ -1233,12 +1252,14 @@ public class mainPage extends javax.swing.JFrame {
         trangChu.setVisible(true);
         taiKhoan.setVisible(false);
         donhang.setVisible(false);
+        chitietdonhang.setVisible(false);
     }//GEN-LAST:event_mainPageMouseClicked
 
     private void accountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountMouseClicked
         trangChu.setVisible(false);
         taiKhoan.setVisible(true);
         donhang.setVisible(false);
+        chitietdonhang.setVisible(false);
     }//GEN-LAST:event_accountMouseClicked
 
     private void mainPageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainPageMouseEntered
@@ -1308,6 +1329,7 @@ public class mainPage extends javax.swing.JFrame {
         trangChu.setVisible(false);
         taiKhoan.setVisible(false);
         donhang.setVisible(true);
+        chitietdonhang.setVisible(false);
         
     }//GEN-LAST:event_orderMouseClicked
 
@@ -1383,11 +1405,17 @@ public class mainPage extends javax.swing.JFrame {
     }
 
     private void loadDetailOrderList() {
+//        String[][] details = {
+//            {"P-001", "Giày Nike Air", "600.000", "1", "600.000", "/asset/picture/product/AYTT001-2.jpg"},
+//            {"P-002", "Vớ thể thao", "50.000", "2", "100.000", "/asset/picture/product/AYTT001-2.jpg"},
+//            {"P-003", "Dây giày", "30.000", "1", "30.000", "/asset/picture/product/AYTT001-2.jpg"},
+//            {"P-004", "Balo thể thao", "450.000", "1", "450.000", "/asset/picture/product/AYTT001-2.jpg"}
+//        };
         String[][] details = {
-            {"P-001", "Giày Nike Air", "600.000", "1", "600.000"},
-            {"P-002", "Vớ thể thao", "50.000", "2", "100.000"},
-            {"P-003", "Dây giày", "30.000", "1", "30.000"},
-            {"P-004", "Balo thể thao", "450.000", "1", "450.000"}
+            {"P-001", "/asset/picture/product/AYTT001-2.jpg", "Giày Nike Air", "600.000", "1", "600.000"},
+            {"P-002", "/asset/picture/product/AYTT001-2.jpg", "Vớ thể thao", "50.000", "2", "100.000"},
+            {"P-003", "/asset/picture/product/AYTT001-2.jpg", "Dây giày", "30.000", "1", "30.000"},
+            {"P-004", "/asset/picture/product/AYTT001-2.jpg", "Balo thể thao", "450.000", "1", "450.000"}
         };
 
         ListChiTietOrder.removeAll();
@@ -1396,7 +1424,7 @@ public class mainPage extends javax.swing.JFrame {
             orderitem item = new orderitem(this);
 
             // Gán dữ liệu 5 cột chính
-            item.setOrderData(d[0], d[1], d[2], d[3], d[4]);
+            item.setDetailOrderData(d[0], d[1], d[2], d[3], d[4],d[5]);
 
             item.hideActionButtons();
 
@@ -1508,6 +1536,7 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1528,6 +1557,8 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

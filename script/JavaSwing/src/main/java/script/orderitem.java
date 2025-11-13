@@ -4,6 +4,9 @@
  */
 package script;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author acebi
@@ -17,15 +20,6 @@ public class orderitem extends javax.swing.JPanel {
     public orderitem(mainPage parent) {
         this.parentFrame = parent;
         initComponents();
-        
-
-
-        jLabel6.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jLabel7.setForeground(java.awt.Color.RED);
-        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
     }
     
     public void setOrderData(String orderId, String orderName, String date, String status, String price) {
@@ -35,27 +29,86 @@ public class orderitem extends javax.swing.JPanel {
         jLabel4.setText(status);
         jLabel5.setText(price);
     }
-    
-    public void hideActionButtons() {
-        // Xóa icon
-        jLabel6.setIcon(null);
-        jLabel7.setIcon(null);
-
-        // Xóa text nếu có
-        jLabel6.setText("");
-        jLabel7.setText("");
-
-        // Tắt click
-        jLabel6.setCursor(null);
-        jLabel7.setCursor(null);
-
-        for (java.awt.event.MouseListener ml : jLabel6.getMouseListeners()) {
-            jLabel6.removeMouseListener(ml);
-        }
-        for (java.awt.event.MouseListener ml : jLabel7.getMouseListeners()) {
-            jLabel7.removeMouseListener(ml);
-        }
+//    public void setDetailOrderData(String orderId, String orderName, String date, String status, String price,String picturePath) {
+//        jLabel1.setText(orderId);
+//        jLabel2.setText(orderName);
+//        jLabel3.setText(date);
+//        jLabel4.setText(status);
+//        jLabel5.setText(price);
+////        jLabel6.setIcon(new ImageIcon(picture))
+    /// @param orderId;
+    /// @param picturePath
+    /// @param orderName
+    /// @param date
+    /// @param status
+    /// @param price
+//    setScaledIcon(jLabel6, picturePath, 65, 65);
+//    }
+    public void setDetailOrderData(String orderId, String picturePath, String orderName, String date, String status, String price) {
+        jLabel1.setText(orderId);
+        setScaledIcon(jLabel2, picturePath, 65, 65);
+        jLabel3.setText(orderName);
+        jLabel4.setText(date);
+        jLabel5.setText(status);
+        jLabel6.setText(price);
+//        jLabel6.setIcon(new ImageIcon(picture));
     }
+
+    private void setScaledIcon(javax.swing.JLabel label, String path, int w, int h) {
+        try {
+            java.net.URL url = getClass().getResource(path);
+            if (url == null) {
+                System.out.println("Không tìm thấy icon: " + path);
+                label.setIcon(null);
+                return;
+            }
+
+            ImageIcon icon = new ImageIcon(url);
+            Image img = icon.getImage().getScaledInstance(w, h, Image.SCALE_SMOOTH);
+            label.setIcon(new ImageIcon(img));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }    
+//    public void hideActionButtons() {
+//        // Xóa icon
+//        // Đặt lại icon khác hoặc xóa icon
+////        try {
+////            jLabel6.setIcon(new ImageIcon(getClass().getResource("/asset/picture/product/AYTT001-2.jpg")));
+////        } catch (Exception e) {
+////            System.out.println("Lỗi load icon: " + e);
+////        }
+//        jLabel7.setIcon(null);
+////        jLabel6.setIcon(null);
+//
+//        // Xóa text nếu có
+//        jLabel6.setText("");
+//        jLabel7.setText("");
+//
+//        // Tắt click
+//        jLabel6.setCursor(null);
+//        jLabel7.setCursor(null);
+//
+//        for (java.awt.event.MouseListener ml : jLabel6.getMouseListeners()) {
+//            jLabel6.removeMouseListener(ml);
+//        }
+//        for (java.awt.event.MouseListener ml : jLabel7.getMouseListeners()) {
+//            jLabel7.removeMouseListener(ml);
+//        }
+//    }
+
+    public void hideActionButtons() {
+
+//    jLabel6.setText("");
+    jLabel7.setText("");
+
+    jLabel6.setIcon(null);
+    jLabel7.setIcon(null);
+
+    jLabel6.setCursor(null);
+    jLabel7.setCursor(null);
+}
 
 
     /**
@@ -91,7 +144,6 @@ public class orderitem extends javax.swing.JPanel {
         add(jLabel1);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("jLabel2");
         jLabel2.setOpaque(true);
         add(jLabel2);
 
