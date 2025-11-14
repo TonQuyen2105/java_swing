@@ -15,7 +15,7 @@ import javax.swing.SwingConstants;
  *
  * @author acebi
  */
-public class Order extends javax.swing.JFrame {
+public class OrderDetail extends javax.swing.JFrame {
 
     /**
      * Creates new form Order
@@ -24,7 +24,7 @@ public class Order extends javax.swing.JFrame {
 //    private JPanel listPanel;
 //    private JScrollPane scrollPane;
 
-    public Order() {
+    public OrderDetail() {
         initComponents();
         loadOrderList(); 
     }
@@ -38,21 +38,22 @@ public class Order extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ListSanPham = new javax.swing.JPanel();
         Sanpham = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        ListSanPham = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.BorderLayout(0, 5));
-
-        ListSanPham.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ListSanPham.setLayout(new javax.swing.BoxLayout(ListSanPham, javax.swing.BoxLayout.Y_AXIS));
-        getContentPane().add(ListSanPham, java.awt.BorderLayout.CENTER);
 
         Sanpham.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Sanpham.setLayout(new java.awt.GridLayout(1, 0));
@@ -79,8 +80,28 @@ public class Order extends javax.swing.JFrame {
 
         getContentPane().add(Sanpham, java.awt.BorderLayout.NORTH);
 
+        ListSanPham.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ListSanPham.setLayout(new javax.swing.BoxLayout(ListSanPham, javax.swing.BoxLayout.Y_AXIS));
+        getContentPane().add(ListSanPham, java.awt.BorderLayout.CENTER);
+
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 60, 5));
+
+        jLabel6.setText("đang xác thực");
+        jPanel1.add(jLabel6);
+
+        jLabel7.setText("đã đóng gói");
+        jPanel1.add(jLabel7);
+
+        jLabel8.setText("đã giao cho đơn vị vận chuyển");
+        jPanel1.add(jLabel8);
+
+        jLabel9.setText("đang giao hàng");
+        jPanel1.add(jLabel9);
+
+        jLabel10.setText("hàng đã được giao");
+        jPanel1.add(jLabel10);
+
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_END);
 
         pack();
@@ -172,23 +193,21 @@ public class Order extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Order().setVisible(true);
+                new OrderDetail().setVisible(true);
             }
         });
     }
@@ -197,10 +216,15 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JPanel ListSanPham;
     private javax.swing.JPanel Sanpham;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

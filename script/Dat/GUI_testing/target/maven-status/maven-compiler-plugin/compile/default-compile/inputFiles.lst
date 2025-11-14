@@ -1,4 +1,5 @@
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\Asset\DeleteAll.java
+C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\Asset\order.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\Asset\Product\category.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\Asset\Product\color.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\Asset\Product\description.java
@@ -15,6 +16,8 @@ C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\model\Entity\Products.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\HomePage.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\Order.java
+C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\OrderDetail.java
+C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\OrderList.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\ProductCard.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\ProductDetail.java
 C:\Users\acebi\Documents\GitHub\java_swing\script\Dat\GUI_testing\src\main\java\view\ProductListView.java

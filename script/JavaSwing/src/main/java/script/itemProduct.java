@@ -16,14 +16,14 @@ public class itemProduct extends javax.swing.JPanel {
     /**
      * Creates new form itemProduct
      */
-    public itemProduct(String ten, String anh, Double gia) {
+    public itemProduct(String anh, String ten, Double gia) {
         initComponents();
         
         lblName.setText(ten);
         lblPrice.setText(String.valueOf(gia));
         
         ImageIcon imageProduct = new ImageIcon(anh);
-        Image img = imageProduct.getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+        Image img = imageProduct.getImage().getScaledInstance(260, 260, Image.SCALE_SMOOTH);
         lblImage.setIcon(new ImageIcon(img));
         
     }
@@ -43,32 +43,41 @@ public class itemProduct extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        lblImage.setBackground(new java.awt.Color(102, 102, 255));
-        lblImage.setText("jLabel1");
+        lblImage.setBackground(new java.awt.Color(255, 255, 255));
+        lblImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblImage.setOpaque(true);
 
-        lblName.setBackground(new java.awt.Color(255, 102, 102));
+        lblName.setBackground(new java.awt.Color(255, 255, 255));
+        lblName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(255, 51, 51));
         lblName.setText("jLabel1");
         lblName.setOpaque(true);
 
+        lblPrice.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblPrice.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-            .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                    .addComponent(lblImage, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addContainerGap()
+                .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
