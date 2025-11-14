@@ -289,8 +289,8 @@ public class mainPage extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
@@ -301,6 +301,8 @@ public class mainPage extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel43 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -409,7 +411,7 @@ public class mainPage extends javax.swing.JFrame {
         pnlHeaderLayout.setHorizontalGroup(
             pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHeaderLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
@@ -418,9 +420,12 @@ public class mainPage extends javax.swing.JFrame {
         );
         pnlHeaderLayout.setVerticalGroup(
             pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1)
-            .addComponent(jButton2)
-            .addComponent(jButton3)
+            .addGroup(pnlHeaderLayout.createSequentialGroup()
+                .addGroup(pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -1028,7 +1033,7 @@ public class mainPage extends javax.swing.JFrame {
         jPanel1.add(jLabel29);
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel8.setLayout(new java.awt.GridLayout());
+        jPanel8.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel42.setText(" ");
         jLabel42.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 50, 1));
@@ -1060,18 +1065,18 @@ public class mainPage extends javax.swing.JFrame {
         jLabel31.setText("ProductName");
         jPanel18.add(jLabel31);
 
+        jLabel34.setText("Price");
+        jPanel18.add(jLabel34);
+
         jLabel33.setText("Quantity");
         jPanel18.add(jLabel33);
 
-        jLabel34.setText("Total");
-        jPanel18.add(jLabel34);
-
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setLayout(new java.awt.GridLayout());
+        jPanel7.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel40.setBackground(new java.awt.Color(255, 255, 255));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel40.setText("Price");
+        jLabel40.setText(" ");
         jLabel40.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 10));
         jPanel7.add(jLabel40);
 
@@ -1108,23 +1113,45 @@ public class mainPage extends javax.swing.JFrame {
 
         listsanpham.add(chitietdonhang, "card5");
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Search");
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/picture/user/71403.png"))); // NOI18N
+        jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(listsanpham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9))
-            .addComponent(sidemenu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel43)
+                .addGap(56, 56, 56))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(listsanpham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sidemenu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel9)
-                .addGap(0, 0, 0)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listsanpham, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel9)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(listsanpham, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(sidemenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -1412,10 +1439,10 @@ public class mainPage extends javax.swing.JFrame {
 //            {"P-004", "Balo thể thao", "450.000", "1", "450.000", "/asset/picture/product/AYTT001-2.jpg"}
 //        };
         String[][] details = {
-            {"P-001", "/asset/picture/product/AYTT001-2.jpg", "Giày Nike Air", "600.000", "1", "600.000"},
-            {"P-002", "/asset/picture/product/AYTT001-2.jpg", "Vớ thể thao", "50.000", "2", "100.000"},
-            {"P-003", "/asset/picture/product/AYTT001-2.jpg", "Dây giày", "30.000", "1", "30.000"},
-            {"P-004", "/asset/picture/product/AYTT001-2.jpg", "Balo thể thao", "450.000", "1", "450.000"}
+            {"P-001", "/asset/picture/product/AYTT001-2.jpg", "Giày Nike Air", "600.000", "1"}, 
+            {"P-002", "/asset/picture/product/AYTT001-2.jpg", "Vớ thể thao", "50.000", "2"},
+            {"P-003", "/asset/picture/product/AYTT001-2.jpg", "Dây giày", "30.000", "1"},
+            {"P-004", "/asset/picture/product/AYTT001-2.jpg", "Balo thể thao", "450.000", "1"}
         };
 
         ListChiTietOrder.removeAll();
@@ -1424,7 +1451,7 @@ public class mainPage extends javax.swing.JFrame {
             orderitem item = new orderitem(this);
 
             // Gán dữ liệu 5 cột chính
-            item.setDetailOrderData(d[0], d[1], d[2], d[3], d[4],d[5]);
+            item.setDetailOrderData(d[0], d[1], d[2], d[3], d[4]);
 
             item.hideActionButtons();
 
@@ -1537,6 +1564,7 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1567,6 +1595,7 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel listsanpham;
     private javax.swing.JPanel logo;
     private javax.swing.JLabel mainPage;

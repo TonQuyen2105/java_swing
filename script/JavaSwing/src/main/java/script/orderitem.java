@@ -44,13 +44,13 @@ public class orderitem extends javax.swing.JPanel {
     /// @param price
 //    setScaledIcon(jLabel6, picturePath, 65, 65);
 //    }
-    public void setDetailOrderData(String orderId, String picturePath, String orderName, String date, String status, String price) {
+    public void setDetailOrderData(String orderId, String picturePath, String orderName, String date, String status) {
         jLabel1.setText(orderId);
         setScaledIcon(jLabel2, picturePath, 65, 65);
         jLabel3.setText(orderName);
         jLabel4.setText(date);
         jLabel5.setText(status);
-        jLabel6.setText(price);
+
 //        jLabel6.setIcon(new ImageIcon(picture));
     }
 
