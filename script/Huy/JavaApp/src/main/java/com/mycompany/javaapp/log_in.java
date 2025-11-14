@@ -35,7 +35,6 @@ public class log_in extends javax.swing.JFrame {
         btn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         sign_up_lbl = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
@@ -107,14 +106,6 @@ public class log_in extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel6.setText("Quên mật khẩu?");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
-
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
 
         jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
@@ -138,8 +129,7 @@ public class log_in extends javax.swing.JFrame {
                         .addComponent(jSeparator3)
                         .addComponent(jLabel3)
                         .addComponent(pwd_txt)
-                        .addComponent(jSeparator1)
-                        .addComponent(jLabel6))
+                        .addComponent(jSeparator1))
                     .addGroup(containerLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -153,7 +143,7 @@ public class log_in extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(2, 2, 2)
                 .addComponent(username_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,15 +155,13 @@ public class log_in extends javax.swing.JFrame {
                 .addComponent(pwd_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(btn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
                 .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(sign_up_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17)
-                .addComponent(jLabel6)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGap(44, 44, 44))
         );
 
         username_txt.getAccessibleContext().setAccessibleName("");
@@ -242,10 +230,6 @@ public class log_in extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_sign_up_lblMouseClicked
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel6MouseClicked
-
     private void containerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_containerMouseClicked
         
     }//GEN-LAST:event_containerMouseClicked
@@ -297,7 +281,6 @@ public class log_in extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;

@@ -14,9 +14,9 @@ public class cartItem extends javax.swing.JPanel {
         name_lbl.setText(name);
         code_lbl.setText(code);
         color_lbl.setText(color);
-        price_lbl.setText(String.valueOf(price));
+        price_lbl.setText(String.valueOf(price + "đ"));
         quantity_lbl.setText(String.valueOf(quantity));
-        total_lbl.setText(String.valueOf(quantity * price));
+        total_lbl.setText(String.valueOf(quantity * price + "đ"));
     }
 
     @SuppressWarnings("unchecked")

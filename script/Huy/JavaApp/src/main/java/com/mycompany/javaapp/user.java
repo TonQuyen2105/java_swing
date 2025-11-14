@@ -16,6 +16,14 @@ import com.google.gson.JsonObject;
  * @author acebi
  */
 public class user {
+    private static String userID;
+    public static void getUserID(String id)
+    {
+        userID = id;
+    }
+    public static String setUserID(){
+        return userID;
+    }
     public static void run() {
         try 
         {
