@@ -11,6 +11,7 @@ view\Order$1.class
 Bath\Cum$1.class
 DB\ConnectDB.class
 Bath\ProductListView.class
+Asset\address.class
 model\DAO\BaseDAO.class
 view\OrderDetail$1.class
 view\ProductDetail$1.class
