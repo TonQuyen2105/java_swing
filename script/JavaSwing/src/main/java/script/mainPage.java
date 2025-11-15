@@ -227,7 +227,7 @@ public class mainPage extends javax.swing.JFrame {
         mainPage = new javax.swing.JLabel();
         account = new javax.swing.JLabel();
         order = new javax.swing.JLabel();
-        cart = new javax.swing.JLabel();
+        cart_lbl = new javax.swing.JLabel();
         thongKe = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
@@ -331,7 +331,6 @@ public class mainPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1266, 890));
 
         pnlHeader.setBackground(new java.awt.Color(255, 255, 255));
         pnlHeader.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -531,17 +530,20 @@ public class mainPage extends javax.swing.JFrame {
             }
         });
 
-        cart.setBackground(new java.awt.Color(255, 255, 255));
-        cart.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cart.setText("Giỏ Hàng");
-        cart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cart.setOpaque(true);
-        cart.addMouseListener(new java.awt.event.MouseAdapter() {
+        cart_lbl.setBackground(new java.awt.Color(255, 255, 255));
+        cart_lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cart_lbl.setText("Giỏ Hàng");
+        cart_lbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cart_lbl.setOpaque(true);
+        cart_lbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cart_lblMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                cartMouseEntered(evt);
+                cart_lblMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                cartMouseExited(evt);
+                cart_lblMouseExited(evt);
             }
         });
 
@@ -569,7 +571,7 @@ public class mainPage extends javax.swing.JFrame {
             .addComponent(mainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(order, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(cart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cart_lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(thongKe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator2)
         );
@@ -582,7 +584,7 @@ public class mainPage extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(order, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(cart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cart_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(thongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -1305,9 +1307,9 @@ public class mainPage extends javax.swing.JFrame {
         order.setBackground(new Color(232, 17, 35));
     }//GEN-LAST:event_orderMouseEntered
 
-    private void cartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartMouseEntered
-        cart.setBackground(new Color(232, 17, 35));
-    }//GEN-LAST:event_cartMouseEntered
+    private void cart_lblMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cart_lblMouseEntered
+        cart_lbl.setBackground(new Color(232, 17, 35));
+    }//GEN-LAST:event_cart_lblMouseEntered
 
     private void thongKeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thongKeMouseEntered
         thongKe.setBackground(new Color(232, 17, 35));
@@ -1321,9 +1323,10 @@ public class mainPage extends javax.swing.JFrame {
         order.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_orderMouseExited
 
-    private void cartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartMouseExited
-        cart.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_cartMouseExited
+    private void cart_lblMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cart_lblMouseExited
+        cart_lbl.setBackground(new Color(255, 255, 255));
+
+    }//GEN-LAST:event_cart_lblMouseExited
 
     private void thongKeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thongKeMouseExited
         thongKe.setBackground(new Color(255, 255, 255));
@@ -1359,6 +1362,11 @@ public class mainPage extends javax.swing.JFrame {
         chitietdonhang.setVisible(false);
         
     }//GEN-LAST:event_orderMouseClicked
+
+    private void cart_lblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cart_lblMouseClicked
+        cart cartOpen = new cart();
+        cartOpen.setVisible(true);
+    }//GEN-LAST:event_cart_lblMouseClicked
 
     // Phương thức mở menu
     void openMenuBar() {
@@ -1513,7 +1521,7 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JPanel ListChiTietOrder;
     private javax.swing.JPanel ListOrder;
     private javax.swing.JLabel account;
-    private javax.swing.JLabel cart;
+    private javax.swing.JLabel cart_lbl;
     private javax.swing.JPanel chitietdonhang;
     private javax.swing.JPanel donhang;
     private javax.swing.JButton jButton1;
