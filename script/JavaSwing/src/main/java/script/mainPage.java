@@ -14,6 +14,12 @@ import java.awt.Frame;
 import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -24,6 +30,7 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import script.orderitem;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -42,7 +49,11 @@ public class mainPage extends javax.swing.JFrame {
         initComponents();
         loadOrderList();
         loadDetailOrderList();
+        getAllProducts();
+        getAllInforUser();
         
+        
+
         
         
         // chỉnh menu
@@ -110,51 +121,7 @@ public class mainPage extends javax.swing.JFrame {
 
     pnlProducts.setLayout(new GridLayout(0, 4, 30 , 30));
 
-    itemProduct sp1 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày bóng rổ", 130.501);
-//    file:/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg
 
-    itemProduct sp2 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-4.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp3 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-5.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp4 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-6.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp5 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-5.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp6 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-6.jpg", "Giày bóng rổ", 130.501);
-    itemProduct sp7 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp8 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-4.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp9 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-2.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp10 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-6.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp11 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-4.jpg", "Giày bóng rổ", 130.501);
-    itemProduct sp12 = new itemProduct("/C:/Users/acebi/Documents/GitHub/java_swing/script/JavaSwing/src/main/resources/asset/picture/product/AYTT001-5.jpg", "Giày chạy bộ", 130.501);
-    itemProduct sp13 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    itemProduct sp14 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    itemProduct sp15 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    itemProduct sp16 = new itemProduct("images/bongro.png", "Giày bóng rổ", 130.501);
-    itemProduct sp17 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    itemProduct sp18 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    itemProduct sp19 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    itemProduct sp20 = new itemProduct("images/chaybo.png", "Giày chạy bộ", 130.501);
-    pnlProducts.add(sp1);
-    pnlProducts.add(sp2);
-    pnlProducts.add(sp3);
-    pnlProducts.add(sp4);
-    pnlProducts.add(sp5);
-    pnlProducts.add(sp6);
-    pnlProducts.add(sp7);
-    pnlProducts.add(sp8);
-    pnlProducts.add(sp9);
-    pnlProducts.add(sp10);
-    pnlProducts.add(sp11);
-    pnlProducts.add(sp12);
-    pnlProducts.add(sp13);
-    pnlProducts.add(sp14);
-    pnlProducts.add(sp15);
-    pnlProducts.add(sp16);
-    pnlProducts.add(sp17);
-    pnlProducts.add(sp18);
-    pnlProducts.add(sp19);
-    pnlProducts.add(sp20);
-    
-    pnlProducts.revalidate();
-    pnlProducts.repaint();
     
             // ---------------------- LABEL QUAY LẠI ----------------------
     JLabel lblBackToOrder = new JLabel("← Quay lại đơn hàng");
@@ -227,7 +194,7 @@ public class mainPage extends javax.swing.JFrame {
         mainPage = new javax.swing.JLabel();
         account = new javax.swing.JLabel();
         order = new javax.swing.JLabel();
-        cart = new javax.swing.JLabel();
+        lblcart = new javax.swing.JLabel();
         thongKe = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
@@ -253,9 +220,9 @@ public class mainPage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        UserName = new javax.swing.JLabel();
+        Gmail = new javax.swing.JLabel();
+        address = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -531,17 +498,20 @@ public class mainPage extends javax.swing.JFrame {
             }
         });
 
-        cart.setBackground(new java.awt.Color(255, 255, 255));
-        cart.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cart.setText("Giỏ Hàng");
-        cart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cart.setOpaque(true);
-        cart.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblcart.setBackground(new java.awt.Color(255, 255, 255));
+        lblcart.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblcart.setText("Giỏ Hàng");
+        lblcart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblcart.setOpaque(true);
+        lblcart.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblcartMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                cartMouseEntered(evt);
+                lblcartMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                cartMouseExited(evt);
+                lblcartMouseExited(evt);
             }
         });
 
@@ -569,7 +539,7 @@ public class mainPage extends javax.swing.JFrame {
             .addComponent(mainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(order, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(cart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblcart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(thongKe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator2)
         );
@@ -582,7 +552,7 @@ public class mainPage extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(order, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(cart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblcart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(thongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -593,15 +563,25 @@ public class mainPage extends javax.swing.JFrame {
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Trợ Giúp");
+        jLabel7.setText("Đăng Nhập");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel7.setOpaque(true);
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Đăng Xuất");
+        jLabel8.setText("Đăng Ký");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.setOpaque(true);
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -748,11 +728,11 @@ public class mainPage extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setText("Address:");
 
-        jLabel12.setText("Tôn Quyền");
+        UserName.setText("Tôn Quyền");
 
-        jLabel13.setText("0937685909");
+        Gmail.setText("0937685909");
 
-        jLabel14.setText("27C Phạm Vấn, phường Phú Thọ Hòa, quận Tân Phú, TPHCM");
+        address.setText("27C Phạm Vấn, phường Phú Thọ Hòa, quận Tân Phú, TPHCM");
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton5.setText("DASHBOARD");
@@ -808,12 +788,12 @@ public class mainPage extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(17, 17, 17)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(Gmail, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -838,15 +818,15 @@ public class mainPage extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel12))
+                    .addComponent(UserName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel13))
+                    .addComponent(Gmail))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel14))
+                    .addComponent(address))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
@@ -1283,10 +1263,32 @@ public class mainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_mainPageMouseClicked
 
     private void accountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountMouseClicked
-        trangChu.setVisible(false);
-        taiKhoan.setVisible(true);
-        donhang.setVisible(false);
-        chitietdonhang.setVisible(false);
+        if (!userSession.isLoggedIn) {
+            JOptionPane.showMessageDialog(this, 
+                "Bạn cần đăng nhập để truy cập trang này!",
+                "Thông báo",
+            JOptionPane.WARNING_MESSAGE);
+          
+            log_in login;
+            try {
+                login = new log_in();
+                login.setVisible(true);
+                login.setLocationRelativeTo(null);
+            } catch (SQLException ex) {
+                Logger.getLogger(mainPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            trangChu.setVisible(false);
+            taiKhoan.setVisible(false);
+            donhang.setVisible(false);
+            chitietdonhang.setVisible(false);
+        }
+        else {
+            trangChu.setVisible(false);
+            taiKhoan.setVisible(true);
+            donhang.setVisible(false);
+            chitietdonhang.setVisible(false);
+        }
     }//GEN-LAST:event_accountMouseClicked
 
     private void mainPageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainPageMouseEntered
@@ -1305,9 +1307,9 @@ public class mainPage extends javax.swing.JFrame {
         order.setBackground(new Color(232, 17, 35));
     }//GEN-LAST:event_orderMouseEntered
 
-    private void cartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartMouseEntered
-        cart.setBackground(new Color(232, 17, 35));
-    }//GEN-LAST:event_cartMouseEntered
+    private void lblcartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblcartMouseEntered
+        lblcart.setBackground(new Color(232, 17, 35));
+    }//GEN-LAST:event_lblcartMouseEntered
 
     private void thongKeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thongKeMouseEntered
         thongKe.setBackground(new Color(232, 17, 35));
@@ -1321,9 +1323,9 @@ public class mainPage extends javax.swing.JFrame {
         order.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_orderMouseExited
 
-    private void cartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartMouseExited
-        cart.setBackground(new Color(255, 255, 255));
-    }//GEN-LAST:event_cartMouseExited
+    private void lblcartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblcartMouseExited
+        lblcart.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_lblcartMouseExited
 
     private void thongKeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thongKeMouseExited
         thongKe.setBackground(new Color(255, 255, 255));
@@ -1338,14 +1340,38 @@ public class mainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        repairInformation repair = new repairInformation(this, true, jLabel12.getText(), jLabel13.getText(), jLabel14.getText());
+        repairInformation repair = new repairInformation(this, true, UserName.getText(), Gmail.getText(), address.getText());
         repair.setVisible(true);
         
         if (repair.isSaved()) {
-            jLabel12.setText(repair.getName());
-            jLabel13.setText(repair.getPhone());
-            jLabel14.setText(repair.getAddress());
+            UserName.setText(repair.getName());
+            Gmail.setText(repair.getPhone());
+            address.setText(repair.getAddress());
         }
+        
+        System.out.println("USERID: " + userSession.getUserID());
+        
+        try {
+                ConnectDB conn = new ConnectDB();
+                Connection con = conn.getConnection();
+                String sql = "UPDATE Users SET UserName = ?, Email = ? WHERE UsersID = ?";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setString(1, repair.getName());
+                ps.setString(2, repair.getPhone());
+                ps.setInt(3, userSession.getUserID());
+                ps.executeUpdate();
+                
+                String sql1 = "UPDATE Addresses SET Address = ? WHERE UsersID = ?";
+                PreparedStatement ps1 = con.prepareStatement(sql1);
+                ps1.setString(1, repair.getAddress());
+                ps1.setInt(2, userSession.getUserID());   // userID của người đang đăng nhập!
+
+                ps1.executeUpdate();
+                
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1359,6 +1385,29 @@ public class mainPage extends javax.swing.JFrame {
         chitietdonhang.setVisible(false);
         
     }//GEN-LAST:event_orderMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+       log_in login;
+        try {
+            login = new log_in();
+            login.setVisible(true);
+            login.setLocationRelativeTo(null);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        sign_up signup = new sign_up();
+        signup.setVisible(true);
+        signup.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void lblcartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblcartMouseClicked
+        cart cartopen = new cart();
+        cartopen.setVisible(true);
+        
+    }//GEN-LAST:event_lblcartMouseClicked
 
     // Phương thức mở menu
     void openMenuBar() {
@@ -1467,12 +1516,69 @@ public class mainPage extends javax.swing.JFrame {
     }
 
        
-       public void showChiTietDonHang() {
-    trangChu.setVisible(false);
-    taiKhoan.setVisible(false);
-    donhang.setVisible(false);
-    chitietdonhang.setVisible(true);
+    public void showChiTietDonHang() {
+        trangChu.setVisible(false);
+        taiKhoan.setVisible(false);
+        donhang.setVisible(false);
+        chitietdonhang.setVisible(true);
     }     
+       
+    public void getAllProducts() {
+        try {
+            ConnectDB conn = new ConnectDB();
+            Connection con = conn.getConnection();
+
+            String sql = "SELECT p.ProductName, p.Price, p.PicturePath FROM Products p ";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String productName = rs.getString("ProductName");
+                int productPrice = rs.getInt("Price");
+                String productPath = rs.getString("PicturePath");
+                
+                itemProduct sp = new itemProduct(productPath, productName, productPrice);
+                pnlProducts.add(sp);
+            }
+            pnlProducts.revalidate();
+            pnlProducts.repaint();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    
+    public void getAllInforUser() {
+        try {
+            ConnectDB conn = new ConnectDB();
+            Connection con = conn.getConnection();
+            
+            String sql = "SELECT u.Username, u.Email, a.Address FROM  [dbo].[Users] u JOIN [dbo].[Addresses] a ON u.UsersID = a.UsersID WHERE u.UsersID = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, userSession.getUserID());
+            ResultSet rs = ps.executeQuery();
+            
+            
+            while (rs.next()) {
+                
+                String userName = rs.getString("Username");
+                String userEmail = rs.getString("Email");
+                String userAddress = rs.getString("Address");
+                
+                UserName.setText(userName);
+                Gmail.setText(userEmail);
+                address.setText(userAddress);
+            }
+        }
+        catch (Exception e) {
+                e.printStackTrace();
+        }
+    }
+  
+    
+    
+    
             
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1510,10 +1616,12 @@ public class mainPage extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Gmail;
     private javax.swing.JPanel ListChiTietOrder;
     private javax.swing.JPanel ListOrder;
+    private javax.swing.JLabel UserName;
     private javax.swing.JLabel account;
-    private javax.swing.JLabel cart;
+    private javax.swing.JLabel address;
     private javax.swing.JPanel chitietdonhang;
     private javax.swing.JPanel donhang;
     private javax.swing.JButton jButton1;
@@ -1530,9 +1638,6 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -1596,6 +1701,7 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblcart;
     private javax.swing.JPanel listsanpham;
     private javax.swing.JPanel logo;
     private javax.swing.JLabel mainPage;

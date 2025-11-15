@@ -16,7 +16,7 @@ public class itemProduct extends javax.swing.JPanel {
     /**
      * Creates new form itemProduct
      */
-    public itemProduct(String anh, String ten, Double gia) {
+    public itemProduct(String anh, String ten, int gia) {
         initComponents();
         
         lblName.setText(ten);
