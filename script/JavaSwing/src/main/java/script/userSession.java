@@ -2,12 +2,12 @@
 package script;
 
 public class userSession {
-    public static String userID = "";
-    public static void setUserID(String id)
+    public static int userID = -1;
+    public static void setUserID(int id)
     {
         userID = id;
     }
-    public static String getUserID(){
+    public static int getUserID(){
         return userID;
     }
 }

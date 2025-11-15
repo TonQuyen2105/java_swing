@@ -217,7 +217,7 @@ public class log_in extends javax.swing.JFrame {
                 if(rs.next())
                 {
                     mainPage main = new mainPage();
-                    userSession.setUserID(rs.getString("UsersID"));
+                    userSession.setUserID(rs.getInt("UsersID"));
                 
                     main.setVisible(true);
                     dispose();

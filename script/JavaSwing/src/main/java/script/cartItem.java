@@ -165,7 +165,7 @@ public class cartItem extends javax.swing.JPanel {
             Connection connect = conn.getConnection();
             String sql_query = "DELETE FROM Cart WHERE UsersID = ? AND ProductID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);
-            ps.setString(1, userSession.getUserID());
+            ps.setInt(1, userSession.getUserID());
             ps.setString(2, code_lbl.getText());
             ps.executeUpdate();
             
@@ -180,7 +180,7 @@ public class cartItem extends javax.swing.JPanel {
             Connection connect = conn.getConnection();
             String sql_query = "UPDATE Cart SET Quantity = ? WHERE UsersID = ? AND ProductID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);
-            ps.setString(2, userSession.getUserID());
+            ps.setInt(2, userSession.getUserID());
             ps.setString(3, code_lbl.getText());
             int quantity = Integer.parseInt(quantity_lbl.getText());
             if(quantity > 1){
@@ -203,7 +203,7 @@ public class cartItem extends javax.swing.JPanel {
             Connection connect = conn.getConnection();
             String sql_query = "UPDATE Cart SET Quantity = ? WHERE UsersID = ? AND ProductID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);
-            ps.setString(2, userSession.getUserID());
+            ps.setInt(2, userSession.getUserID());
             ps.setString(3, code_lbl.getText());
             
             int quantity = Integer.parseInt(quantity_lbl.getText());

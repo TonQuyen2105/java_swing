@@ -31,7 +31,7 @@ public class cart extends javax.swing.JFrame {
                             + "JOIN Color cl ON p.ColorID=cl.ColorID "
                             + "WHERE c.UsersID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);
-            ps.setString(1, userSession.getUserID());
+            ps.setInt(1, userSession.getUserID());
             ResultSet rs = ps.executeQuery();
             int sum_price = 0;
             while(rs.next())
