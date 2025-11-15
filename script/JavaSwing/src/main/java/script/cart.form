@@ -325,7 +325,13 @@
             </Container>
             <Component class="javax.swing.JLabel" name="reset_lbl">
               <Properties>
+<<<<<<< HEAD
                 <Property name="text" type="java.lang.String" value="reset"/>
+=======
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\MSI\Downloads\9041913_reset_icon.png"/>
+                </Property>
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="reset_lblMouseClicked"/>

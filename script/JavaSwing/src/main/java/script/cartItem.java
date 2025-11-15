@@ -7,7 +7,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+<<<<<<< HEAD
 
+=======
+import script.connectionDB;
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
 
 /**
  *
@@ -161,7 +165,11 @@ public class cartItem extends javax.swing.JPanel {
 
     private void del_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_del_btnActionPerformed
         try {
+<<<<<<< HEAD
             ConnectDB conn = new ConnectDB();
+=======
+            connectionDB conn = new connectionDB();
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
             Connection connect = conn.getConnection();
             String sql_query = "DELETE FROM Cart WHERE UsersID = ? AND ProductID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);
@@ -176,7 +184,11 @@ public class cartItem extends javax.swing.JPanel {
 
     private void minus_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minus_btnActionPerformed
          try {
+<<<<<<< HEAD
             ConnectDB conn = new ConnectDB();
+=======
+            connectionDB conn = new connectionDB();
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
             Connection connect = conn.getConnection();
             String sql_query = "UPDATE Cart SET Quantity = ? WHERE UsersID = ? AND ProductID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);
@@ -199,7 +211,11 @@ public class cartItem extends javax.swing.JPanel {
 
     private void plus_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plus_btnActionPerformed
         try {
+<<<<<<< HEAD
             ConnectDB conn = new ConnectDB();
+=======
+            connectionDB conn = new connectionDB();
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
             Connection connect = conn.getConnection();
             String sql_query = "UPDATE Cart SET Quantity = ? WHERE UsersID = ? AND ProductID = ?";
             PreparedStatement ps = connect.prepareStatement(sql_query);

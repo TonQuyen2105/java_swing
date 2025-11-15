@@ -194,7 +194,11 @@ public class mainPage extends javax.swing.JFrame {
         mainPage = new javax.swing.JLabel();
         account = new javax.swing.JLabel();
         order = new javax.swing.JLabel();
+<<<<<<< HEAD
         lblcart = new javax.swing.JLabel();
+=======
+        cart_lbl = new javax.swing.JLabel();
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         thongKe = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
@@ -298,7 +302,6 @@ public class mainPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1266, 890));
 
         pnlHeader.setBackground(new java.awt.Color(255, 255, 255));
         pnlHeader.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -498,6 +501,7 @@ public class mainPage extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         lblcart.setBackground(new java.awt.Color(255, 255, 255));
         lblcart.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblcart.setText("Giỏ Hàng");
@@ -512,6 +516,22 @@ public class mainPage extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblcartMouseExited(evt);
+=======
+        cart_lbl.setBackground(new java.awt.Color(255, 255, 255));
+        cart_lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cart_lbl.setText("Giỏ Hàng");
+        cart_lbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cart_lbl.setOpaque(true);
+        cart_lbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cart_lblMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cart_lblMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cart_lblMouseExited(evt);
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
             }
         });
 
@@ -539,7 +559,11 @@ public class mainPage extends javax.swing.JFrame {
             .addComponent(mainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(order, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
             .addComponent(lblcart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(cart_lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
             .addComponent(thongKe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jSeparator2)
         );
@@ -552,7 +576,11 @@ public class mainPage extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(order, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
+<<<<<<< HEAD
                 .addComponent(lblcart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                .addComponent(cart_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
                 .addGap(0, 0, 0)
                 .addComponent(thongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -1111,8 +1139,8 @@ public class mainPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel43)
-                .addGap(56, 56, 56))
+                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(listsanpham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1307,9 +1335,15 @@ public class mainPage extends javax.swing.JFrame {
         order.setBackground(new Color(232, 17, 35));
     }//GEN-LAST:event_orderMouseEntered
 
+<<<<<<< HEAD
     private void lblcartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblcartMouseEntered
         lblcart.setBackground(new Color(232, 17, 35));
     }//GEN-LAST:event_lblcartMouseEntered
+=======
+    private void cart_lblMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cart_lblMouseEntered
+        cart_lbl.setBackground(new Color(232, 17, 35));
+    }//GEN-LAST:event_cart_lblMouseEntered
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
 
     private void thongKeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thongKeMouseEntered
         thongKe.setBackground(new Color(232, 17, 35));
@@ -1323,9 +1357,16 @@ public class mainPage extends javax.swing.JFrame {
         order.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_orderMouseExited
 
+<<<<<<< HEAD
     private void lblcartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblcartMouseExited
         lblcart.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_lblcartMouseExited
+=======
+    private void cart_lblMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cart_lblMouseExited
+        cart_lbl.setBackground(new Color(255, 255, 255));
+
+    }//GEN-LAST:event_cart_lblMouseExited
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
 
     private void thongKeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_thongKeMouseExited
         thongKe.setBackground(new Color(255, 255, 255));
@@ -1386,6 +1427,7 @@ public class mainPage extends javax.swing.JFrame {
         
     }//GEN-LAST:event_orderMouseClicked
 
+<<<<<<< HEAD
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
        log_in login;
         try {
@@ -1408,6 +1450,12 @@ public class mainPage extends javax.swing.JFrame {
         cartopen.setVisible(true);
         
     }//GEN-LAST:event_lblcartMouseClicked
+=======
+    private void cart_lblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cart_lblMouseClicked
+        cart cartOpen = new cart();
+        cartOpen.setVisible(true);
+    }//GEN-LAST:event_cart_lblMouseClicked
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
 
     // Phương thức mở menu
     void openMenuBar() {
@@ -1621,7 +1669,11 @@ public class mainPage extends javax.swing.JFrame {
     private javax.swing.JPanel ListOrder;
     private javax.swing.JLabel UserName;
     private javax.swing.JLabel account;
+<<<<<<< HEAD
     private javax.swing.JLabel address;
+=======
+    private javax.swing.JLabel cart_lbl;
+>>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
     private javax.swing.JPanel chitietdonhang;
     private javax.swing.JPanel donhang;
     private javax.swing.JButton jButton1;
