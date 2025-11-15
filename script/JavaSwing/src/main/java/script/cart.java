@@ -22,11 +22,7 @@ public class cart extends javax.swing.JFrame {
     }
     public void load_cartItem(){
         try {
-<<<<<<< HEAD
             ConnectDB conn = new ConnectDB();
-=======
-            connectionDB conn = new connectionDB();
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
             Connection connect = conn.getConnection();
             
             String sql_query = "SELECT p.ProductName, p.ProductID, cl.ColorName, p.Price, c.Quantity FROM Cart c "
@@ -210,11 +206,7 @@ public class cart extends javax.swing.JFrame {
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
-<<<<<<< HEAD
         reset_lbl.setText("reset");
-=======
-        reset_lbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\MSI\\Downloads\\9041913_reset_icon.png")); // NOI18N
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         reset_lbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 reset_lblMouseClicked(evt);

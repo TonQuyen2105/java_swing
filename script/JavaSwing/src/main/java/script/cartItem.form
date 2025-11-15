@@ -101,12 +101,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="img_lbl">
       <Properties>
-<<<<<<< HEAD
-=======
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\MSI\Desktop\anh.jpg"/>
-        </Property>
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>

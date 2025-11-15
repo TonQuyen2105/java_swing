@@ -13,11 +13,7 @@ public class log_in extends javax.swing.JFrame {
     public log_in() throws SQLException {
         initComponents();
         setLocationRelativeTo(null);
-<<<<<<< HEAD
         ConnectDB conn = new ConnectDB();
-=======
-        connectionDB conn = new connectionDB();
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         conn.getConnection();
     }
 
@@ -199,11 +195,7 @@ public class log_in extends javax.swing.JFrame {
     }//GEN-LAST:event_pwd_txtActionPerformed
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-<<<<<<< HEAD
         ConnectDB conn = new ConnectDB();
-=======
-        connectionDB conn = new connectionDB();
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         try {
             Connection connect = conn.getConnection();
             
@@ -222,39 +214,14 @@ public class log_in extends javax.swing.JFrame {
             if(username_validate.matches("^[a-zA-Z0-9]+$"))
             {
             
-<<<<<<< Updated upstream
                 if(rs.next())
                 {
-<<<<<<< HEAD
                     userSession.setID(rs.getInt("UsersID"));
                     mainPage main = new mainPage();
                     main.setVisible(true);
                     userSession.isLoggedIn = true;
                     
                     
-=======
-                    mainPage main = new mainPage();
-                    userSession.setUserID(rs.getInt("UsersID"));
-                
-=======
-//                if(rs.next())
-//                {
-//                    mainPage main = new mainPage();
-//                    userSession.setUserID(rs.getInt("UsersID"));
-//                
-//                    main.setVisible(true);
-//                    dispose();
-//                }
-                if (rs.next()) {
-                    int uid = rs.getInt("UsersID");
-                    userSession.setUserID(uid);
-                    System.out.println("log in roi!");
-                    System.out.println("userid là " + uid);
-                    mainPage main = new mainPage(uid);  // tạo form sau khi có session
->>>>>>> Stashed changes
-                    main.setVisible(true);
-                    dispose();
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
                 }
                 else
                 {

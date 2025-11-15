@@ -123,11 +123,7 @@ public class sign_up extends javax.swing.JFrame {
         username_txt.setBorder(null);
 
         back_lbl.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-<<<<<<< HEAD
         back_lbl.setText("abc");
-=======
-        back_lbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\MSI\\Downloads\\2931166_arrow_back_undo_left_navigation_icon.png")); // NOI18N
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         back_lbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 back_lblMouseClicked(evt);
@@ -236,11 +232,7 @@ public class sign_up extends javax.swing.JFrame {
     }//GEN-LAST:event_name_txtActionPerformed
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-<<<<<<< HEAD
         ConnectDB conn = new ConnectDB();
-=======
-        connectionDB conn = new connectionDB();
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
         try {
             Connection connect = conn.getConnection();
     

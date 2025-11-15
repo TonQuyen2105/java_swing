@@ -14,8 +14,8 @@ import java.sql.SQLException;
  */
 public class ConnectDB {
     private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=APP_sale_giay;encrypt=false;trustServerCertificate=true;";
-    private static final String USER = "sa";
-    private static final String PASSWORD = "12345";
+    private static final String USER = "SQLServer";
+    private static final String PASSWORD = "bill599199";
     
     public static Connection getConnection() {
         return getConnection(false); // mặc định có log

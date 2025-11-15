@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -14,16 +12,6 @@ public class userSession {
     public static boolean isLoggedIn = false;
     public static int userID = -1;
     public static void setID(int id)
-=======
-
-=======
->>>>>>> Stashed changes
-package script;
-
-public class userSession {
-    public static int userID = -1;
-    public static void setUserID(int id)
->>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae
     {
         userID = id;
     }

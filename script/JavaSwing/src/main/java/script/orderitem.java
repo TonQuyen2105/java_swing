@@ -44,12 +44,12 @@ public class orderitem extends javax.swing.JPanel {
     /// @param price
 //    setScaledIcon(jLabel6, picturePath, 65, 65);
 //    }
-    public void setDetailOrderData(String orderId, String picturePath, String orderName, String date, String status) {
-        jLabel1.setText(orderId);
-        setScaledIcon(jLabel2, picturePath, 65, 65);
-        jLabel3.setText(orderName);
-        jLabel4.setText(date);
-        jLabel5.setText(status);
+    public void setDetailOrderData(int productID,String productPath,String productName,int productPrice,int productQuantity) {
+        jLabel1.setText(String.valueOf(productID));
+        setScaledIcon(jLabel2, productPath, 65, 65);
+        jLabel3.setText(productName);
+        jLabel4.setText(String.valueOf(productPrice));
+        jLabel5.setText(String.valueOf(productQuantity));
 
 //        jLabel6.setIcon(new ImageIcon(picture));
     }
@@ -180,6 +180,7 @@ public class orderitem extends javax.swing.JPanel {
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         parentFrame.showChiTietDonHang();
+        
 // TODO add your handling code here:
     }//GEN-LAST:event_formMouseClicked
 
