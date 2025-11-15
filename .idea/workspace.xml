@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4f4113d6-c304-4c29-8866-27b4942accf6" name="Changes" comment="✅ 30/10/2025 - - add name to users test some grid layout for product fix asset.user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/JavaSwing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/connectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/connectionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/log_in.java" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/log_in.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/mainPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/mainPage.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/mainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/mainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/userSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/userSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/orderitem.form" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/orderitem.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/orderitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/script/JavaSwing/src/main/java/script/orderitem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,7 @@
       <workItem from="1762935607967" duration="662000" />
       <workItem from="1762975988954" duration="441000" />
       <workItem from="1763033820906" duration="3545000" />
-      <workItem from="1763197983638" duration="1615000" />
+      <workItem from="1763197983638" duration="4629000" />
     </task>
     <task id="LOCAL-00001" summary="✅ 30/10/2025 - - add name to users test some grid layout for product fix asset.user">
       <option name="closed" value="true" />

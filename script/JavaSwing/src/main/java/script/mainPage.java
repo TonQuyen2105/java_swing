@@ -48,7 +48,6 @@ public class mainPage extends javax.swing.JFrame {
     public mainPage() {
         initComponents();
         loadOrderList();
-        loadDetailOrderList();
         getAllProducts();
         getAllInforUser();
         
@@ -298,7 +297,6 @@ public class mainPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1266, 890));
 
         pnlHeader.setBackground(new java.awt.Color(255, 255, 255));
         pnlHeader.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1478,6 +1476,9 @@ public class mainPage extends javax.swing.JFrame {
      */
     
     private void loadOrderList() {
+        ListOrder.removeAll();   // XÓA SẠCH cũ
+        ListOrder.revalidate();
+        ListOrder.repaint();
         try {
             ConnectDB conn = new ConnectDB();
             Connection con = conn.getConnection();
@@ -1523,31 +1524,42 @@ public class mainPage extends javax.swing.JFrame {
         }
     }
 
-    private void loadDetailOrderList() {      
+    private void loadDetailOrderList(int orderID) {  
+        ListChiTietOrder.removeAll(); // XÓA SẠCH cũ
+        ListChiTietOrder.revalidate();
+        ListChiTietOrder.repaint();
         try {
             ConnectDB conn = new ConnectDB();
             Connection con = conn.getConnection();
             
-            String sql = "SELECT p.ProductID, p.PicturePath, p.ProductName, p.Price, od. Quantity From OrderDetail od JOIN Products p ON p.ProductID = od.ProductID JOIN Orders o ON o.OrderID = od.OrderID WHERE o.UsersID = ?";
+            String sql = "SELECT p.ProductID, p.PicturePath, p.ProductName, p.Price, od.Quantity "
+            + "FROM OrderDetail od "
+            + "JOIN Products p ON p.ProductID = od.ProductID "
+            + "WHERE od.OrderID = ?";
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, userSession.getUserID());
+            ps.setInt(1, orderID); 
             ResultSet rs = ps.executeQuery();
             
             
             while (rs.next()) {
-                int productID = rs.getInt("ProductID");
-                String productPath = rs.getString("PicturePath");
-                String productName = rs.getString("ProductName");
-                int productPrice = rs.getInt("Price");
-                int productQuantity = rs.getInt("Quantity");
                 orderitem item = new orderitem(this);
-                item.setDetailOrderData(productID, productPath, productName, productPrice, productQuantity);
-                item.setMaximumSize(new java.awt.Dimension(Integer.MAX_VALUE, 50));
-                item.setBorder(BorderFactory.createLineBorder(java.awt.Color.GRAY));
-
+                item.hideActionButtons();
+                item.setDetailOrderData(
+                    rs.getInt("ProductID"),
+                    rs.getString("PicturePath"),
+                    rs.getString("ProductName"),
+                    rs.getInt("Price"),
+                    rs.getInt("Quantity")
+                );
                 ListChiTietOrder.add(item);
-                ListChiTietOrder.add(Box.createVerticalStrut(0));
+                
+                item.setMaximumSize(new java.awt.Dimension(Integer.MAX_VALUE, 50));
+                item.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.GRAY));
+
             }
+
+            ListChiTietOrder.revalidate();
+            ListChiTietOrder.repaint();
         }
         catch (Exception e) {
                 e.printStackTrace();
@@ -1557,11 +1569,14 @@ public class mainPage extends javax.swing.JFrame {
 
 
        
-    public void showChiTietDonHang() {
+    public void showChiTietDonHang(int orderId) {
         trangChu.setVisible(false);
         taiKhoan.setVisible(false);
         donhang.setVisible(false);
         chitietdonhang.setVisible(true);
+        
+        loadDetailOrderList(orderId);
+        updateStatusLabel(getOrderStatus(orderId));
     }     
        
     public void getAllProducts() {
@@ -1618,9 +1633,121 @@ public class mainPage extends javax.swing.JFrame {
     }
   
     
+        public void cancelOrder(int orderId) {
+        try {
+            ConnectDB conn = new ConnectDB();
+            Connection con = conn.getConnection();
+
+            String sql = "UPDATE Orders SET Status = 'canceled' WHERE OrderID = ? AND Status = 'order'";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, orderId);
+
+            int rows = ps.executeUpdate();
+
+            if (rows > 0) {
+                JOptionPane.showMessageDialog(this,
+                    "Đơn hàng #" + orderId + " đã được hủy thành công!",
+                    "Thành công",
+                    JOptionPane.INFORMATION_MESSAGE);
+
+                loadOrderList(); // Cập nhật lại danh sách
+            } else {
+                JOptionPane.showMessageDialog(this,
+                    "Đơn hàng không thể hủy vì đã qua giai đoạn xác thực.",
+                    "Lỗi",
+                    JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateStatusLabel(String status) {
+
+        // Reset màu trước
+        Color defaultColor = Color.BLACK;
+        Color activeColor = new Color(46, 204, 113); // xanh
+
+        // Reset tất cả label về mặc định
+        JLabel[] labels = { jLabel35, jLabel36, jLabel37, jLabel38, jLabel39 };
+        for (JLabel lb : labels) {
+            lb.setForeground(defaultColor);
+        }
+
+        // Reset layout panel19 về mặc định (phòng trường hợp case canceled trước đó)
+        jPanel19.removeAll();
+        jPanel19.setLayout(new GridLayout(1, 5)); 
+        jPanel19.add(jLabel35);
+        jPanel19.add(jLabel36);
+        jPanel19.add(jLabel37);
+        jPanel19.add(jLabel38);
+        jPanel19.add(jLabel39);
+
+        // Nếu đơn hàng bị hủy → show panel khác
+        if (status.equalsIgnoreCase("canceled")) {
+
+            jPanel19.removeAll();
+            JLabel canceledLabel = new JLabel("ĐƠN HÀNG ĐÃ HỦY", SwingConstants.CENTER);
+
+            canceledLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
+            canceledLabel.setForeground(Color.RED);
+
+            jPanel19.setLayout(new BorderLayout());
+            jPanel19.add(canceledLabel, BorderLayout.CENTER);
+
+            jPanel19.revalidate();
+            jPanel19.repaint();
+            return;
+        }
+
+        // Tô màu theo tiến trình trạng thái
+        switch (status.toLowerCase()) {
+            case "order" -> {
+                jLabel35.setForeground(activeColor);
+            }
+            case "packed" -> {
+                jLabel35.setForeground(activeColor);
+                jLabel36.setForeground(activeColor);
+            }
+            case "shipping" -> {
+                jLabel35.setForeground(activeColor);
+                jLabel36.setForeground(activeColor);
+                jLabel37.setForeground(activeColor);
+                jLabel38.setForeground(activeColor); // shipping có 2 label
+            }
+            case "finish" -> {
+                jLabel35.setForeground(activeColor);
+                jLabel36.setForeground(activeColor);
+                jLabel37.setForeground(activeColor);
+                jLabel38.setForeground(activeColor);
+                jLabel39.setForeground(activeColor);
+            }
+        }
+
+        jPanel19.revalidate();
+        jPanel19.repaint();
+    }
+
+       
     
+    public String getOrderStatus(int orderId) {
+        try {
+            ConnectDB conn = new ConnectDB();
+            Connection con = conn.getConnection();
+            String sql = "SELECT Status FROM Orders WHERE OrderID = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, orderId);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) return rs.getString("Status");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
     
-            
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

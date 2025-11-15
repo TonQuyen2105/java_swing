@@ -6,6 +6,7 @@ package script;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,19 +17,24 @@ public class orderitem extends javax.swing.JPanel {
      * Creates new form OrderDetail
      */
     private mainPage parentFrame; 
+    private int currentOrderID;
+    private String currentStatus;
     
     public orderitem(mainPage parent) {
         this.parentFrame = parent;
         initComponents();
     }
     
-    public void setOrderData(String orderId, String orderName, String date, String status, String price) {
-        jLabel1.setText(orderId);
-        jLabel2.setText(orderName);
-        jLabel3.setText(date);
-        jLabel4.setText(status);
-        jLabel5.setText(price);
-    }
+public void setOrderData(String orderId, String orderName, String date, String status, String price) {
+    currentOrderID = Integer.parseInt(orderId.replace("#", "")); // Lưu ID thực
+    currentStatus = status;
+
+    jLabel1.setText(orderId);
+    jLabel2.setText(orderName);
+    jLabel3.setText(date);
+    jLabel4.setText(status);
+    jLabel5.setText(price);
+}
 //    public void setDetailOrderData(String orderId, String orderName, String date, String status, String price,String picturePath) {
 //        jLabel1.setText(orderId);
 //        jLabel2.setText(orderName);
@@ -173,16 +179,43 @@ public class orderitem extends javax.swing.JPanel {
         jPanel1.add(jLabel6);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/picture/user/exit.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel7);
 
         add(jPanel1);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        parentFrame.showChiTietDonHang();
+        parentFrame.showChiTietDonHang(currentOrderID);
         
 // TODO add your handling code here:
     }//GEN-LAST:event_formMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // Chỉ cho hủy nếu đang xác thực
+         String status = jLabel4.getText().trim();
+
+         if (!status.equalsIgnoreCase("order")) {
+             JOptionPane.showMessageDialog(this,
+                 "Đơn hàng không còn ở trạng thái đang xác thực nên không thể hủy!",
+                 "Thông báo",
+                 JOptionPane.WARNING_MESSAGE);
+             return;
+         }
+
+         int choice = JOptionPane.showConfirmDialog(this,
+                 "Bạn có chắc muốn hủy đơn hàng " + currentOrderID + " không?",
+                 "Xác nhận",
+                 JOptionPane.YES_NO_OPTION);
+
+         if (choice == JOptionPane.YES_OPTION) {
+             parentFrame.cancelOrder(currentOrderID); // GỌI TỪ MAIN PAGE
+         }
+    }//GEN-LAST:event_jLabel7MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
