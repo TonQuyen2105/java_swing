@@ -6,6 +6,8 @@ import Bath.Cum;
 //import Bath.ProductListView;
 import view.ProductListView;
 import Asset.Product.product;
+import Asset.address;
+import Asset.order;
 import Asset.user;
 
 /*
@@ -25,6 +27,10 @@ public class Launch {
         
         user.run();
         
+        address.run();
+        
+        order.run();
+                
         product.run();
         
         new Cum().setVisible(true);
