@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -15,6 +16,8 @@ public class userSession {
     public static void setID(int id)
 =======
 
+=======
+>>>>>>> Stashed changes
 package script;
 
 public class userSession {

@@ -222,6 +222,7 @@ public class log_in extends javax.swing.JFrame {
             if(username_validate.matches("^[a-zA-Z0-9]+$"))
             {
             
+<<<<<<< Updated upstream
                 if(rs.next())
                 {
 <<<<<<< HEAD
@@ -235,6 +236,22 @@ public class log_in extends javax.swing.JFrame {
                     mainPage main = new mainPage();
                     userSession.setUserID(rs.getInt("UsersID"));
                 
+=======
+//                if(rs.next())
+//                {
+//                    mainPage main = new mainPage();
+//                    userSession.setUserID(rs.getInt("UsersID"));
+//                
+//                    main.setVisible(true);
+//                    dispose();
+//                }
+                if (rs.next()) {
+                    int uid = rs.getInt("UsersID");
+                    userSession.setUserID(uid);
+                    System.out.println("log in roi!");
+                    System.out.println("userid là " + uid);
+                    mainPage main = new mainPage(uid);  // tạo form sau khi có session
+>>>>>>> Stashed changes
                     main.setVisible(true);
                     dispose();
 >>>>>>> f504e55fb860ac25cdbae292524890a45ff4a7ae

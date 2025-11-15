@@ -6,9 +6,10 @@ import java.sql.*;
  * @author acebi
  */
 public class connectionDB {
-    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=App_sale_giay;encrypt=false;trustServerCertificate=true;";
-    private static final String USER = "sa";
-    private static final String PASSWORD = "12345";
+    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=APP_sale_giay;encrypt=false;trustServerCertificate=true;";
+    private static final String USER = "SQLServer";
+    private static final String PASSWORD = "bill599199";
+    
     public Connection getConnection() throws SQLException 
     {
         return getConnection(false);
