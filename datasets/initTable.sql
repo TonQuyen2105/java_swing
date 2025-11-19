@@ -125,3 +125,18 @@ CREATE TABLE CartItem (
     ProductVariantID INT,
     FOREIGN KEY (ProductVariantID) REFERENCES ProductVariant(ProductVariantID)
 );
+
+CREATE TABLE BillDetail (
+	BillDetailID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	BillID INT,
+	FOREIGN KEY (BillID) REFERENCES Bill(BillID),
+	ProductID INT,
+	FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+CREATE TABLE Bill (
+	BillID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	CreateDate Date,
+	UserID INT,
+	FOREIGN KEY (UserID) REFERENCES Users(UserID),
+);
